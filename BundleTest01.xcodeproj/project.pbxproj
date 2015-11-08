@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		B031D1E61BEF1F1400C8A430 /* BundleTest01.h in Headers */ = {isa = PBXBuildFile; fileRef = B031D1E51BEF1F1400C8A430 /* BundleTest01.h */; };
-		B031D1E81BEF1F1400C8A430 /* BundleTest01.m in Sources */ = {isa = PBXBuildFile; fileRef = B031D1E71BEF1F1400C8A430 /* BundleTest01.m */; };
+		B031D1EF1BEF1F2C00C8A430 /* BundleTest01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B031D1EE1BEF1F2C00C8A430 /* BundleTest01.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B031D1E21BEF1F1400C8A430 /* libBundleTest01.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libBundleTest01.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 		B031D1E51BEF1F1400C8A430 /* BundleTest01.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BundleTest01.h; sourceTree = "<group>"; };
-		B031D1E71BEF1F1400C8A430 /* BundleTest01.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BundleTest01.m; sourceTree = "<group>"; };
+		B031D1EE1BEF1F2C00C8A430 /* BundleTest01.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BundleTest01.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +31,7 @@
 		B031D1D91BEF1F1400C8A430 = {
 			isa = PBXGroup;
 			children = (
+				B031D1EE1BEF1F2C00C8A430 /* BundleTest01.swift */,
 				B031D1E41BEF1F1400C8A430 /* BundleTest01 */,
 				B031D1E31BEF1F1400C8A430 /* Products */,
 			);
@@ -48,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				B031D1E51BEF1F1400C8A430 /* BundleTest01.h */,
-				B031D1E71BEF1F1400C8A430 /* BundleTest01.m */,
 			);
 			path = BundleTest01;
 			sourceTree = "<group>";
@@ -90,6 +90,7 @@
 		B031D1DA1BEF1F1400C8A430 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = shigw;
 				TargetAttributes = {
@@ -120,7 +121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B031D1E81BEF1F1400C8A430 /* BundleTest01.m in Sources */,
+				B031D1EF1BEF1F2C00C8A430 /* BundleTest01.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,19 +208,24 @@
 		B031D1EC1BEF1F1400C8A430 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		B031D1ED1BEF1F1400C8A430 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				EXECUTABLE_PREFIX = lib;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
